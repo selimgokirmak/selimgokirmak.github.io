@@ -1,0 +1,34 @@
+[
+    {
+        "title": "www.zillow.com",
+        "image1": "assets/img/portfolio/zillow/zillow1.png",
+        "image2": "assets/img/portfolio/zillow/zillow2.png",
+        "image3": "assets/img/portfolio/zillow/zillow3.png",
+        "portfolioModal": "#portfolioModal1",
+        "category": "Real Estate"
+    }, 
+    {
+        "title": "www.mortgageproscan.ca",
+        "image1": "assets/img/portfolio/mortgageproscan/mortgageproscan1.png",
+        "image2": "assets/img/portfolio/mortgageproscan/mortgageproscan2.png",
+        "image3": "assets/img/portfolio/mortgageproscan/mortgageproscan3.png",
+        "portfolioModal": "#portfolioModal2",
+        "category": "Directory"
+    },
+    {
+        "title": "www.yellowpages.com.au",
+        "image1": "assets/img/portfolio/yellowpagesau/yellowpagesau1.png",
+        "image2": "assets/img/portfolio/yellowpagesau/yellowpagesau2.png",
+        "image3": "assets/img/portfolio/yellowpagesau/yellowpagesau2.png",
+        "portfolioModal": "#portfolioModal3",
+        "category": "Directory"
+    },
+    {
+        "title": "www.messefrankfurt.com",
+        "image1": "assets/img/portfolio/messefrankfurt/messefrankfurt1.png",
+        "image2": "assets/img/portfolio/messefrankfurt/messefrankfurt2.png",
+        "image3": "assets/img/portfolio/messefrankfurt/messefrankfurt3.png",
+        "portfolioModal": "#portfolioModal4",
+        "category": "Exhibitor Directory"
+    }
+]
