@@ -57,7 +57,9 @@ function addPortfolio(portfolio, portfolio_wrapper) {
 
     const h6_2 = document.createElement('h6');
     h6_2.className = "mt-2";
-    h6_2.textContent = "#" + portfolio.category.replace(" ", "");
+    for (const category of portfolio.category) {
+        h6_2.textContent += "#" + category.replace(" ", "") + " ";
+    }
 
     div4.appendChild(i);
 
@@ -85,7 +87,11 @@ function loadPortfolio(input_value=null) {
         if (input_value === null) {
             addPortfolio(portfolio, portfolio_wrapper);
         } else {
-            if (portfolio.title.toLowerCase().includes(input_value) || portfolio.category.toLowerCase().includes(input_value)) {
+            let category_text = "";
+            for (const category of portfolio.category) {
+                category_text += category.toLowerCase() + " ";
+            }
+            if (portfolio.title.toLowerCase().includes(input_value) || category_text.includes(input_value)) {
                 addPortfolio(portfolio, portfolio_wrapper);
             } 
         }
