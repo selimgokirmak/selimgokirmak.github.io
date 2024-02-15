@@ -9,6 +9,7 @@
 
 
 let portfolio_db;
+let reviews_db;
 
 document.addEventListener("DOMContentLoaded", () => {
     fetch("../portfolioDB.json")
@@ -16,12 +17,62 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
         portfolio_db = data;
         // console.log(portfolio_db);
+        fetch("../reviewsDB.json")
+        .then(response => response.json())
+        .then((data2) => {
+            reviews_db = data2;
 
-        loadPortfolio();
-        buttonListener();
-        // placeHolderAnimation();
+            loadPortfolio();
+            loadReviews();
+            buttonListener();
+            // placeHolderAnimation();
+
+        })
     })
 })
+
+
+function addReviews(review_image) {
+    const reviews_wrapper = document.querySelector('.reviews-wrapper');
+    const div1 = document.createElement('div');
+    div1.className = "col-md-6 col-lg-4 mb-5";
+    
+    const div2 = document.createElement('div');
+    div2.className = "review-item px-5";
+    div2.style.boxShadow = "0 0 10px 0 rgba(0, 0, 0, 0.5)";
+    div2.style.borderRadius = "10px";
+
+    const div3 = document.createElement('div');
+    div3.className = "review-item-caption d-flex align-items-center justify-content-center";
+    // div3.style.width = "100%";
+
+    const img = document.createElement('img');
+    img.className = "img-fluid";
+    img.style.borderRadius = "10px";
+    img.src = review_image;
+    img.alt = "...";
+
+
+
+    div2.appendChild(div3);
+    div2.appendChild(img);
+
+    div1.appendChild(div2);
+
+    reviews_wrapper.appendChild(div1);
+}
+
+
+function loadReviews() {
+    const review_wrapper = document.querySelector('.reviews-wrapper');
+
+    review_wrapper.innerHTML = "";
+
+    for (const review of reviews_db) {
+        addReviews(review.image);
+    }
+    
+}
 
 
 function addPortfolio(portfolio, portfolio_wrapper) {
