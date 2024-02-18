@@ -43,4 +43,13 @@
         "portfolioModal": "#portfolioModal5",
         "category": ["Real Estate", "Broker Directory"]
     }
+    ,
+    {
+        "title": "www.aqarmap.com.eg",
+        "image1": "assets/img/portfolio/aqarmap/aqarmap1.png",
+        "image2": "assets/img/portfolio/aqarmap/aqarmap2.png",
+        "image3": "assets/img/portfolio/aqarmap/aqarmap3.png",
+        "portfolioModal": "#portfolioModal6",
+        "category": ["Real Estate"]
+    }
 ]
