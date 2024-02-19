@@ -52,4 +52,13 @@
         "portfolioModal": "#portfolioModal6",
         "category": ["Real Estate"]
     }
+    ,
+    {
+        "title": "www.clutch.co",
+        "image1": "assets/img/portfolio/clutch/clutch1.png",
+        "image2": "assets/img/portfolio/clutch/clutch2.png",
+        "image3": "assets/img/portfolio/clutch/clutch3.png",
+        "portfolioModal": "#portfolioModal7",
+        "category": ["Company Directory"]
+    }
 ]
