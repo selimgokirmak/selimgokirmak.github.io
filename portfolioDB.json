@@ -61,4 +61,13 @@
         "portfolioModal": "#portfolioModal7",
         "category": ["Company Directory"]
     }
+    ,
+    {
+        "title": "www.zoopla.co.uk",
+        "image1": "assets/img/portfolio/zoopla/zoopla1.png",
+        "image2": "assets/img/portfolio/zoopla/zoopla2.png",
+        "image3": "assets/img/portfolio/zoopla/zoopla3.png",
+        "portfolioModal": "#portfolioModal8",
+        "category": ["Real Estate"]
+    }
 ]
