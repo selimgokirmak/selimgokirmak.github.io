@@ -10,6 +10,7 @@
 
 let portfolio_db;
 let reviews_db;
+let actors_db;
 
 document.addEventListener("DOMContentLoaded", () => {
     fetch("../portfolioDB.json")
@@ -22,11 +23,17 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((data2) => {
             reviews_db = data2;
 
-            loadPortfolio();
-            loadReviews();
-            buttonListener();
-            // placeHolderAnimation();
+            fetch("../actorsDB.json")
+            .then(response => response.json())
+            .then((data3) => {
+                actors_db = data3;
 
+                loadPortfolio();
+                loadReviews();
+                loadActors();
+                buttonListener();
+                // placeHolderAnimation();
+            })
         })
     })
 })
@@ -62,7 +69,6 @@ function addReviews(review_image) {
     reviews_wrapper.appendChild(div1);
 }
 
-
 function loadReviews() {
     const review_wrapper = document.querySelector('.reviews-wrapper');
 
@@ -70,6 +76,49 @@ function loadReviews() {
 
     for (const review of reviews_db) {
         addReviews(review.image);
+    }
+    
+}
+
+function addActors(actor_image, image_alt, actor_url) {
+    const actors_wrapper = document.querySelector('.actors-wrapper');
+    const div1 = document.createElement('div');
+    div1.className = "col-md-6 col-lg-4 mb-5";
+    
+    const div2 = document.createElement('div');
+    div2.className = "actor-item px-5";
+    div2.style.boxShadow = "0 0 10px 0 rgba(0, 0, 0, 0.5)";
+    div2.style.borderRadius = "10px";
+
+    const a1 = document.createElement('a');
+    a1.href = actor_url;
+    a1.target = "_blank";
+    // div3.className = "actor-item-caption d-flex align-items-center justify-content-center";
+    // div3.style.width = "100%";
+
+    const img = document.createElement('img');
+    img.className = "img-fluid";
+    img.style.borderRadius = "10px";
+    img.src = actor_image;
+    img.alt = image_alt;
+
+
+
+    a1.appendChild(img);
+    div2.appendChild(a1);
+
+    div1.appendChild(div2);
+
+    actors_wrapper.appendChild(div1);
+}
+
+function loadActors() {
+    const actors_wrapper = document.querySelector('.actors-wrapper');
+
+    actors_wrapper.innerHTML = "";
+
+    for (const actor of actors_db) {
+        addActors(actor.image, actor.alt, actor.actor_url);
     }
     
 }
