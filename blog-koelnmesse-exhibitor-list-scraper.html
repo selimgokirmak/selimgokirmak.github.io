@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selim Gökırmak</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <!-- <img src="./assets/images/my-avatar-2.jpg" alt="Selim Gökırmak" width="80"> -->
+          <img src="./assets/images/tenor.gif" alt="Selim Gökırmak" width="80" style="border-radius: 14px;">
+        </figure>
+
+        <div class="info-content">
+          <a href="index.html">
+            <h1 class="name" title="Selim Gökırmak">Selim Gökırmak</h1>
+          </a>
+
+          <p class="title">Web Scraping Specialist</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <a href="mailto:skython.dev@gmail.com">
+              <div class="icon-box">
+                <!-- <ion-icon name="mail-outline"></ion-icon> -->
+                <img src="/assets/images/gmail_icon-dark.png" style="max-width: 80%; border-radius: 14px;" alt="email">
+              </div>
+  
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+  
+                <a href="mailto:skython.dev@gmail.com" class="contact-link">skython.dev@gmail.com</a>
+              </div>
+            </a>
+
+          </li>
+
+          <li class="contact-item">
+
+            <a href="https://www.upwork.com/freelancers/~0190b0f3570c2eacbf" target="_blank">
+              <div class="icon-box">
+                <!-- <ion-icon name="phone-portrait-outline"></ion-icon> -->
+                <img src="/assets/images/upwork-icon-dark.png" style="max-width: 80%; border-radius: 14px;" alt="upwork">
+              </div>
+  
+              <div class="contact-info">
+                <p class="contact-title">UpWork</p>
+  
+                <a href="https://www.upwork.com/freelancers/~0190b0f3570c2eacbf" target="_blank"
+                  class="contact-link">upwork.com/selimgokirmak</a>
+              </div>
+            </a>
+
+          </li>
+
+          <li class="contact-item">
+
+            <a href="https://apify.com/skython" target="_blank">
+              <div class="icon-box">
+                <!-- <ion-icon name="phone-portrait-outline"></ion-icon> -->
+                <img src="/assets/images/apify_logo.jpg" style="max-width: 80%; border-radius: 14px;" alt="apify">
+              </div>
+  
+              <div class="contact-info">
+                <p class="contact-title">Apify</p>
+  
+                <a href="https://apify.com/skython" target="_blank" class="contact-link">apify.com/skython</a>
+              </div>
+            </a>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/selimgokirmak/" target="_blank" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link">Home</a>
+          </li>
+        </ul>
+      </nav>
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">Koelnmesse Exhibitor List Scraper</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Trade fairs are one of the best places to connect with businesses, discover new products, and identify potential leads. However, manually collecting exhibitor information from event websites is time-consuming and often overwhelming. This is where <strong>web scraping</strong> comes into play — automating the extraction of structured data from websites for analysis, research, networking, and business intelligence.
+          </p>
+          <p>
+            In this post, I’ll walk you through how a custom-built <strong>Exhibitor List Scraper</strong> works, what kind of data it extracts, and how you can leverage it for B2B lead generation, market research, event networking, and competitive analysis.
+          </p>
+          <br>
+          <h2>Why Scrape Exhibitor Lists?</h2>
+          <p>Exhibitor directories published on trade fair websites often contain valuable information such as:</p>
+          <ul>
+            <li>• Company details (name, address, country)</li>
+            <li>• Contact person info (phone, email, website)</li>
+            <li>• Social media profiles</li>
+            <li>• Hall/stand locations</li>
+            <li>• Product groups and brands</li>
+          </ul>
+          <br>
+          <p>Instead of copying and pasting these details into a spreadsheet, a web scraper can extract all exhibitors in minutes, allowing you to:</p>
+          <ul>
+            <li>• Build targeted contact lists for outreach</li>
+            <li>• Analyze competitors and industry trends</li>
+            <li>• Prepare for networking before attending events</li>
+          </ul>
+          <br>
+
+          <h2>About the Koelnmesse Exhibitor List Scraper</h2>
+          <p>The <strong>Koelnmesse Exhibitor List Scraper</strong> is designed for trade fairs organized by <strong>Koelnmesse</strong> (Cologne, Germany). Many of their events use a consistent website structure, which makes it possible to automate data collection reliably.</p>
+          <p>Some of the supported events include:</p>
+          <ul>
+            <li>• Anuga (Food & Beverage)</li>
+            <li>• Interzum (Furniture production)</li>
+            <li>• Kind + Jugend (Baby and toddler products)</li>
+            <li>• ISM Cologne (Sweets & snacks)</li>
+            <li>• Eisenwarenmesse (Hardware Fair)</li>
+          </ul>
+          <br>
+          <p>If the event website matches the Koelnmesse exhibitor directory format (usually ending with <strong>/list-of-exhibitors/</strong>), the scraper can extract the full exhibitor list.</p>
+
+          <h2>Benefits for Businesses</h2>
+          <p>Using a tool like this, businesses can:</p>
+          <ul>
+            <li>• <strong>Save time</strong>: Automate repetitive data entry tasks.</li>
+            <li>• <strong>Stay informed</strong>: Monitor competitors and industry developments.</li>
+            <li>• <strong>Improve ROI</strong>: Generate clean, structured datasets for sales and marketing.</li>
+            <li>• <strong>Network smarter</strong>: Focus on relevant exhibitors before attending trade fairs.</li>
+          </ul>
+          <br>
+          
+          <h2>Final Thoughts</h2>
+          <p>Web scraping, when applied ethically and responsibly, is a powerful way to transform publicly available web data into actionable insights. For companies targeting international trade shows like those organized by Koelnmesse, automated exhibitor list extraction provides a significant competitive edge.</p>
+          <p>If you’d like to try the Koelnmesse Exhibitor List Scraper, it’s available on the Apify platform. With just a start URL, you can turn exhibitor directories into structured datasets in minutes.</p>
+
+          <br>
+          <p>Check it out here:</p>
+          <a href="https://apify.com/skython/koelnmesse-exhibitor-list-scraper" target="_blank" style="color: aliceblue;">Koelnmesse Exhibitor List Scraper</a>
+
+        </section>
+
+    </div>
+
+  </main>
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

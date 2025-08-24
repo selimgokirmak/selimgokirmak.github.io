@@ -2,281 +2,504 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <meta name="google-site-verification" content="mJuyEJV_-QLH7_1UQxAyc5nlGb2e7ReTSuJnp3B1AKA" />
-    <title>Selim G. - Web Scraping - Data Extraction</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/img/icons.png" />
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
-        type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selim Gökırmak</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href="#page-top">SELIM GOKIRMAK</a>
-            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
-                data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
-                aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars"></i>
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <!-- <img src="./assets/images/my-avatar-2.jpg" alt="Selim Gökırmak" width="80"> -->
+          <img src="./assets/images/tenor.gif" alt="Selim Gökırmak" width="80" style="border-radius: 14px;">
+        </figure>
+
+        <div class="info-content">
+          <a href="index.html">
+            <h1 class="name" title="Selim Gökırmak">Selim Gökırmak</h1>
+          </a>
+
+          <p class="title">Web Scraping Specialist</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+            <a href="mailto:skython.dev@gmail.com">
+              <div class="icon-box">
+                <!-- <ion-icon name="mail-outline"></ion-icon> -->
+                <img src="/assets/images/gmail_icon-dark.png" style="max-width: 80%; border-radius: 14px;" alt="email">
+              </div>
+  
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+  
+                <a href="mailto:skython.dev@gmail.com" class="contact-link">skython.dev@gmail.com</a>
+              </div>
+            </a>
+
+          </li>
+
+          <li class="contact-item">
+            <a href="https://www.upwork.com/freelancers/~0190b0f3570c2eacbf" target="_blank">
+              <div class="icon-box">
+                <!-- <ion-icon name="phone-portrait-outline"></ion-icon> -->
+                <img src="/assets/images/upwork-icon-dark.png" style="max-width: 80%; border-radius: 14px;" alt="upwork">
+              </div>
+  
+              <div class="contact-info">
+                <p class="contact-title">UpWork</p>
+  
+                <a href="https://www.upwork.com/freelancers/~0190b0f3570c2eacbf" target="_blank"
+                  class="contact-link">upwork.com/selimgokirmak</a>
+              </div>
+            </a>
+
+
+          </li>
+
+          <li class="contact-item">
+            <a href="https://apify.com/skython" target="_blank">
+              <div class="icon-box">
+                <!-- <ion-icon name="phone-portrait-outline"></ion-icon> -->
+                <img src="/assets/images/apify_logo.jpg" style="max-width: 80%; border-radius: 14px;" alt="apify">
+              </div>
+  
+              <div class="contact-info">
+                <p class="contact-title">Apify</p>
+  
+                <a href="https://apify.com/skython" target="_blank" class="contact-link">apify.com/skython</a>
+              </div>
+            </a>
+
+          </li>
+
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/selimgokirmak/" target="_blank" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>Home</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="home">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            • Experienced in building scalable Python-based scrapers using Scrapy, Crawlee, BeautifulSoup, Selenium, Playwright, etc.
+          </p>
+          <p>
+            • Developing custom scraping solutions for websites across various industries, including Real Estate, Exhibitor Directories, Social Media, etc.
+          </p>
+          <p>
+            • Delivering scraped data in a structured format (EXCEL, CSV, JSON) with a fast turnaround.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/web-scraping-icon.png" alt="web scraping icon" width="60">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web Scraping</h4>
+
+                <p class="service-item-text">
+                  Extracting data from the internet for clients through freelancing on UpWork.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/development-icon.png" alt="Development icon" width="60">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Actor Development</h4>
+
+                <p class="service-item-text">
+                  Developing ready-to-use Actors for web scraping on Apify.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/upwork-icon-dark.png" alt="Rhys K." style="border-radius: 14px;" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Rhys K.</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    I was very happy with Selim's work. He understood the project and got on with the job straight away. He asked good questions and was very helpful. Thank you.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
             </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#about">About</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#actors">Actors</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#reviews">Reviews</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#portfolio">Portfolio</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Masthead-->
-    <header class="masthead bg-primary text-white text-center">
-        <div class="container d-flex align-items-center flex-column">
-            <!-- Masthead Avatar Image-->
-            <!-- <img class="masthead-avatar mb-5" src="assets/img/avatar1.jpg" alt="..." /> -->
-            <!-- Masthead Heading-->
-            <h1 class="masthead-heading text-uppercase mb-0">SELIM GOKIRMAK</h6>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Web Scraping & Data Extraction Specialist</p>
-        </div>
-    </header>
-    <!-- About Section-->
-    <section class="page-section bg-secondary text-white mb-0" id="about">
-        <div class="container">
-            <!-- About Section Heading-->
-            <h4 class="page-section-heading text-center text-white">Automated Web Scraping and Data Extraction</h3>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- About Section Content-->
-                <div class="row">
-                    <div class="col-lg-10 ms-auto me-auto">
-                        <p class="lead">I am an experienced and detail-oriented Automated Web Scraping and Data Extraction Specialist. 
-                            I am doing automated data extraction jobs only. My goal is to help clients with fast and quality work. 
-                            I worked with many different clients on their projects.</p>
-                    </div>
-                    <div class="col-lg-10 ms-auto me-auto">
-                        <p class="lead">My service is comprehensive and reliable. I provide high-quality and accurate data with a quick turnaround time.
-                            I scrape websites effectively and efficiently. I can create custom scrapers for almost any website. 
-                            Also, I scrape sample data before the contract starts so the client can see how the result will be.</p>
-                    </div>
-                    <div class="col-lg-10 ms-auto me-auto">
-                        <p class="lead">I am always available to answer any questions or discuss project requirements. 
-                            If you have any questions or need help with a project, please feel free to reach out to me.
-                        </p>
-                    </div>
-                    <div class="col-lg-10 ms-auto me-auto">
-                        <p class="lead">Applications: Real Estate, E-Commerce, Directory, Supplier Products, Competitor Research, Products & Reviews, etc.
-                        </p>
-                    </div>
-                    <div class="col-lg-10 ms-auto me-auto">
-                        <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;• Language: Python</p>
-                    </div>
-                    <div class="col-lg-10 ms-auto me-auto">
-                        <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;• Tools: Requests, BeautifulSoup, Playwright, Selenium,
-                            Scrapy</p>
-                    </div>
-                    <div class="col-lg-10 ms-auto me-auto">
-                        <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;• Deliverables: EXCEL, CSV, JSON, etc.</p>
-                    </div>
-                    <div class="col-lg-10 ms-auto me-auto">
-                        <p class="lead">You can contact me on UPWORK.</p>
-                    </div>
-                </div>
-                <!-- About Section Button-->
-                <div class="text-center mt-4">
-                    <a href="https://www.upwork.com/freelancers/~0190b0f3570c2eacbf" target="_blank"
-                        class="icon brands">
-                        <iconify-icon icon="simple-icons:upwork" width="48" height="48"></iconify-icon>
-                    </a>
-                </div>
-        </div>
-    </section>
 
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/upwork-icon-dark.png" alt="Rhys K." style="border-radius: 14px;" width="80" data-modal-img>
+              </figure>
 
-    <!-- Actors Section-->
-    <section class="page-section reviews" id="actors">
-        <div class="container">
-            <!-- Reviews Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">My Apify Actors</h2>
-            <!-- Icon Divider-->
-            <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
             </div>
 
-            <!-- Reviews Grid Items-->
-            <div class="row justify-content-center actors-wrapper" style="min-height: 300px;">
-
-            </div>
-        </div>
-    </section>
-
-    <hr>
-
-    <!-- Reviews Section-->
-    <section class="page-section reviews" id="reviews">
-        <div class="container">
-            <!-- Reviews Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Reviews</h2>
-            <!-- Icon Divider-->
-            <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-
-            <!-- Reviews Grid Items-->
-            <div class="row justify-content-center reviews-wrapper" style="min-height: 300px;">
-
-            </div>
-        </div>
-    </section>
-
-    <hr>
-    <!-- Portfolio Section-->
-    <section class="page-section portfolio" id="portfolio">
-        <div class="container">
-            <!-- Portfolio Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
-            <!-- Icon Divider-->
-            <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-            <!-- 
-
-                <!-- Input Field Section -->
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8 col-sm-10">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control"
-                            placeholder="Filter Jobs by label or website: Real Estate, Directory or zillow, glassdoor ...">
-                        <button class="btn btn-primary" type="button">Clear</button>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center filter-button-group">
-                <div class="col-lg-6 col-md-8 col-sm-10 mb-5 mt-3">
-                    <button class="btn btn-primary filter-button">All</button>
-                    <button class="btn btn-primary filter-button">Real Estate</button>
-                    <button class="btn btn-primary filter-button">Job Portal</button>
-                    <button class="btn btn-primary filter-button">Directory</button>
-                    <button class="btn btn-primary filter-button">Exhibitor</button>
-                    <button class="btn btn-primary filter-button">E-commerce</button>
-                </div>
-            </div>
-
-
-            <!-- Portfolio Grid Items-->
-            <div class="row justify-content-center portfolio-wrapper" style="min-height: 300px;">
-
-                <!-- Portfolio Items-->
-
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Footer-->
-    <footer class="footer text-center py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-lg-0 mx-auto">
-                    <a href="https://www.upwork.com/freelancers/~0190b0f3570c2eacbf" target="_blank"
-                        class="icon brands">
-                        <iconify-icon icon="simple-icons:upwork" width="48" height="48"></iconify-icon>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Copyright Section-->
-    <div class="copyright py-4 text-center text-primary bg-secondary">
-        <div class="container"><small>selimgokirmak.github.io | 2025</small></div>
-    </div>
-
-
-
-
-
-
-
-    <!-- Portfolio Modals-->
-
-    <!-- Portfolio Modal Base-->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl">
             <div class="modal-content">
-                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
-                        aria-label="Close"></button></div>
-                <div class="modal-body text-center pb-5">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-12">
-                                <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary mb-0"></h2>
-                                <!-- Icon Divider-->
-                                <div class="divider-custom">
-                                    <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                    <div class="divider-custom-line"></div>
-                                </div>
-                                <a href="" target="_blank"><img class="img-fluid rounded mb-4 mt-4" src="" alt="..."
-                                        style="box-shadow : 0 0 10px 0 rgba(0, 0, 0, 0.3);" /></a>
-                                <hr>
-                                <a href="" target="_blank"><img class="img-fluid rounded mb-4 mt-4" src="" alt="..."
-                                        style="box-shadow : 0 0 10px 0 rgba(0, 0, 0, 0.3);" /></a>
-                                <hr>
-                                <a href="" target="_blank"><img class="img-fluid rounded mb-4 mt-4" src="" alt="..."
-                                        style="box-shadow : 0 0 10px 0 rgba(0, 0, 0, 0.3);" /></a>
-                                <button class="btn btn-primary" data-bs-dismiss="modal">
-                                    <i class="fas fa-xmark fa-fw"></i>
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+              <h4 class="h3 modal-title" data-modal-title>Rhys K.</h4>
+
+              <time datetime="2024-02-13">13 Feb, 2024</time>
+
+              <div data-modal-text>
+                <p>
+                  I was very happy with Selim's work. He understood the project and got on with the job straight away. He asked good questions and was very helpful. Thank you.
+                </p>
+              </div>
+
             </div>
+
+          </section>
+
         </div>
+
+      </article>
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web Scraping</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Actors</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web Scraping</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Actors</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="actors">
+              <a href="https://apify.com/skython/koelnmesse-exhibitor-list-scraper" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/actors/koelnmesse.png" href="https://apify.com/skython/koelnmesse-exhibitor-list-scraper" alt="Koelnmesse Exhibitor List Scraper" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Koelnmesse Exhibitor List Scraper</h3>
+
+                <p class="project-category">Actors</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="actors">
+              <a href="https://apify.com/skython/messe-frankfurt-exhibitor-list-scraper" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/actors/messe-frankfurt.png" alt="Messe Frankfurt Exhibitor List Scraper" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Messe Frankfurt Exhibitor List Scraper</h3>
+
+                <p class="project-category">Actors</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="actors">
+              <a href="https://apify.com/skython/map-your-show-exhibitor-list-scraper" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/actors/map-your-show.png" alt="Map Your Show Exhibitor List Scraper" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Map Your Show Exhibitor List Scraper</h3>
+
+                <p class="project-category">Actors</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="/blog-koelnmesse-exhibitor-list-scraper.html">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/actors/koelnmesse.png" alt="Koelnmesse Exhibitor List Scraper" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Actors</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2025-08-24">Aug 24, 2025</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Koelnmesse Exhibitor List Scraper</h3>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
     </div>
 
+  </main>
 
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 </html>
