@@ -2,37 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://selimgokirmak.github.io/</loc>
-        <lastmod>2025-08-24T00:00:00+00:00</lastmod>
+        <lastmod>2025-10-16T00:00:00+00:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://selimgokirmak.github.io/blog-koelnmesse-exhibitor-list-scraper.html</loc>
-        <lastmod>2025-09-03T00:00:00+00:00</lastmod>
+        <lastmod>2025-10-16T00:00:00+00:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://selimgokirmak.github.io/blog-messe-frankfurt-exhibitor-list-scraper.html</loc>
-        <lastmod>2025-09-03T00:00:00+00:00</lastmod>
+        <lastmod>2025-10-16T00:00:00+00:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://selimgokirmak.github.io/blog-map-your-show-exhibitor-list-scraper.html</loc>
-        <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+        <lastmod>2025-10-16T00:00:00+00:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://selimgokirmak.github.io/blog-messe-duesseldorf-exhibitor-list-scraper.html</loc>
-        <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+        <lastmod>2025-10-16T00:00:00+00:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://selimgokirmak.github.io/blog-xporience-exhibitor-list-scraper.html</loc>
-        <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+        <lastmod>2025-10-16T00:00:00+00:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://selimgokirmak.github.io/blog-reed-expo-exhibitor-list-scraper.html</loc>
-        <lastmod>2025-09-06T00:00:00+00:00</lastmod>
+        <lastmod>2025-10-16T00:00:00+00:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://selimgokirmak.github.io/blog-messe-muenchen-exhibitor-list-scraper.html</loc>
+        <lastmod>2025-10-16T00:00:00+00:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://selimgokirmak.github.io/blog-xporience-exhibitor-list-scraper-2.html</loc>
+        <lastmod>2025-10-16T00:00:00+00:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://selimgokirmak.github.io/blog-nuernberg-messe-exhibitor-list-scraper.html</loc>
+        <lastmod>2025-10-16T00:00:00+00:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://selimgokirmak.github.io/blog-gsma-mwc-exhibitor-list-scraper.html</loc>
+        <lastmod>2025-10-16T00:00:00+00:00</lastmod>
         <priority>0.8</priority>
     </url>
 </urlset>
