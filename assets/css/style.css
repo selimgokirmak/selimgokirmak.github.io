@@ -306,6 +306,22 @@ main {
   min-width: 259px;
 }
 
+.image-single {
+  position: relative;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.single-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-single {
+  width: 100%;
+  border-radius: 12px;
+}
 
 .image-slider {
   position: relative;
@@ -350,6 +366,7 @@ main {
 .image-slider .next {
   right: 10px;
 }
+
 
 /* Lightbox (fullscreen) */
 .lightbox {
@@ -635,7 +652,7 @@ main {
 
 .about-text {
   color: var(--light-gray);
-  font-size: var(--fs-6);
+  font-size: var(--fs-4);
   font-weight: var(--fw-300);
   line-height: 1.6;
 }

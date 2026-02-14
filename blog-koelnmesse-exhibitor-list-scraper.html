@@ -6,23 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Koelnmesse Exhibitor List Scraper</title>
-
+  
   <!--
     - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/icons.png" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    -->
+    <link rel="shortcut icon" href="./assets/images/icons.png" type="image/x-icon">
+    
+    <!--
+      - custom css link
+      -->
+      <link rel="stylesheet" href="./assets/css/style.css">
+      
+      <!--
+        - google font link
+        -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+        
+        <meta name="description" content="Extract company details, website URLs and contact information from Koelnmesse exhibitor list pages automatically using this Apify scraper. Export data as CSV, Excel or JSON.">
 
 </head>
 
@@ -49,7 +51,7 @@
 
         <div class="info-content">
           <a href="index.html">
-            <h1 class="name" title="Selim Gökırmak">Selim Gökırmak</h1>
+            <h2 class="name" title="Selim Gökırmak">Selim Gökırmak</h2>
           </a>
 
           <p class="title">Web Scraping Specialist</p>
@@ -123,12 +125,28 @@
 
         </ul>
 
+        <!-- <div class="separator"></div>
+
+        <div class="related-scrapers">
+          <h3 class="related-title" style="color: whitesmoke;">Other Exhibitor Scrapers</h3>
+
+          <ul class="related-list">
+            <li>
+              <a href="messe-frankfurt-exhibitor-list-scraper.html">
+                Messe Frankfurt Exhibitor Scraper
+              </a>
+            </li>
+
+          </ul>
+        </div> -->
+
       </div>
 
     </aside>
 
+    
     <div class="main-content">
-
+      
       <nav class="navbar">
         <ul class="navbar-list">
           <li class="navbar-item">
@@ -136,79 +154,138 @@
           </li>
         </ul>
       </nav>
-
-      <article class="about  active" data-page="about">
-
+      
+      <article class="about active" data-page="about">
+        
         <header>
-          <h2 class="h2 article-title">Koelnmesse Exhibitor List Scraper</h2>
+          <h1 class="h2 article-title">Koelnmesse Exhibitor List Scraper</h1>
         </header>
-
+        
         <section class="about-text">
-          <p>
-            Trade fairs are one of the best places to connect with businesses, discover new products, and identify potential leads.
+          
+          <br>
+          
+          <div class="image-single">
+            <div class="single-image-container">
+              <img src="assets/images/actors/koelnmesse-m.png" alt="Koelnmesse Exhibitor List Scraper Image" class="img-single">
+            </div>
+          </div>
+          
+          <br>
+          
+          <p style="padding: 1% 10%;">
+            <a href="https://apify.com/skython/koelnmesse-exhibitor-list-scraper" target="_blank" style="color: antiquewhite; display: inline; text-decoration: underline;"><strong>Koelnmesse Exhibitor List Scraper</strong></a> is a powerful web scraping tool that runs on the <a href="https://apify.com/" target="_blank" style="color: antiquewhite; display:  inline; text-decoration: underline;"><strong>Apify platform*</strong></a> - a solution designed to automatically collect lists of companies participating in trade fairs. It is very easy to use even for non-technical users. (*Apify is a cloud platform and marketplace for web scraping and automation tools.)
           </p>
-          <p>Koelnmesse is one of the biggest trade fair organizers. It hosts many international fairs such as <a href="https://www.anuga.com/" target="_blank" style="display: inline; color: antiquewhite;"><strong>Anuga</strong></a>, <a href="https://www.eisenwarenmesse.com/" target="_blank" style="display: inline; color: antiquewhite;"><strong>Eisenwarenmesse</strong></a>, <a href="https://www.kindundjugend.com/" target="_blank" style="display: inline; color: antiquewhite;"><strong>Kindundjugend</strong></a>, <a href="https://www.spogagafa.com/" target="_blank" style="display: inline; color: antiquewhite;"><strong>Spoga+Gafa</strong></a>. The exhibitor lists at these fairs are worth gold for business development, sales, networking and competitor analysis.</p>
-          <p>
-            In this post, I’ll walk you through how <a href="https://apify.com/skython/koelnmesse-exhibitor-list-scraper" target="_blank" style="color: antiquewhite; display:  inline;"><strong>Koelnmesse Exhibitor List Scraper</strong></a> works, what kind of data it extracts.
-          </p>
+          
+          <p style="padding: 1% 10%;">Koelnmesse is one of the biggest trade fair organizers. It hosts many international fairs such as <a href="https://www.anuga.com/" target="_blank" style="display: inline; color: antiquewhite; text-decoration: underline;"><strong>Anuga</strong></a>, <a href="https://www.eisenwarenmesse.com/" target="_blank" style="display: inline; color: antiquewhite; text-decoration: underline;"><strong>Eisenwarenmesse</strong></a>, <a href="https://www.kindundjugend.com/" target="_blank" style="display: inline; color: antiquewhite; text-decoration: underline;"><strong>Kindundjugend</strong></a>. The exhibitor lists at these fairs are worth gold for business development, sales, networking and competitor analysis.</p>
+          
+          <p style="padding: 1% 10%;">In this article, I will explain what this actor does, how it works, and when it can be useful.</p>
+          
           <br>
-          <h2>What is Koelnmesse Exhibitor List Scraper?</h2>
-          <p>This scraper automatically collects detailed company information from a specific type of trade fair websites provided by Koelnmesse. It is a no-code scraping tool running on the <a href="https://apify.com/" target="_blank" style="color: antiquewhite; display:  inline;"><strong>Apify platform</strong></a>, and it is very easy to use even for non-technical users.</p>
-          <p>Koelnmesse hosts multiple types of event websites, but some of them share the same templates and structures. This scraper is designed to extract data from one of those types of event websites.</p>
+          <h2 style="padding: 1% 10%;">Company Details Extraction from Koelnmesse Exhibitor Pages</h2>
+          
+          <p style="padding: 1% 10%;">Koelnmesse event websites contain detailed exhibitor profile pages for every participating company.</p>
+          
+          <p style="padding: 0% 10%;">The actor automatically:</p>
+          
+          <ul style="padding-left: 13%; padding-right: 10%; padding-top: 0%; padding-bottom: 1%;">
+            <li>1. Crawls the exhibitor listing pages and detects all exhibitor profile links</li>
+            <li>2. Visits each exhibitor profile</li>
+            <li>3. Extracts company details</li>
+            <li>4. Returns a structured dataset ready to download</li>
+          </ul>
+          
+          <p style="padding-left: 10%; padding-right: 10%; padding-top: 2%; padding-bottom: 0%;">Depending on the event template, the dataset may include:</p>
+          
+          <ul style="padding-left: 16%; padding-bottom: 3%;">
+            <li style="list-style: disc;">Company Details</li>
+            <li style="list-style: disc;">Company Name</li>
+            <li style="list-style: disc;">Hall / Stands</li>
+            <li style="list-style: disc;">Full Address</li>
+            <li style="list-style: disc;">Website URL</li>
+            <li style="list-style: disc;">Phone Number</li>
+            <li style="list-style: disc;">Company Email</li>
+            <li style="list-style: disc;">Social Media Links (LinkedIn, Facebook, Instagram, Twitter, YouTube)</li>
+            <li style="list-style: disc;">Product Categories</li>
+            <li style="list-style: disc;">Brands</li>
+          </ul>
+          
+          <p style="padding: 1% 10%;"><a href="https://apify.com/skython/koelnmesse-exhibitor-list-scraper" target="_blank" style="color: antiquewhite; display: inline; text-decoration: underline;"><strong>Koelnmesse Exhibitor List Scraper</strong></a> automates this entire process. Instead of collecting company details one by one, you can extract the full exhibitor dataset from a listing page in minutes.</p>
+          
+          <p style="padding: 1% 10%;">Whether the event has 200 exhibitors or 2,000, the extraction process works the same way - automatically and at scale.</p>
+          
+          <p style="padding: 1% 10%;">All data can be exported as Excel, CSV or JSON.</p>
+          
           <br>
-          <h2>How Can You Know The Correct Website Type?</h2>
-          <p>The websites supported by <a href="https://apify.com/skython/koelnmesse-exhibitor-list-scraper" target="_blank" style="color: antiquewhite; display:  inline;"><strong>Koelnmesse Exhibitor List Scraper</strong></a> mostly share the same template, which makes them very easy to recognize. Sharing some images from the supported websites.</p>
-          <p><strong>Example homepage images of the supported website type:</strong></p>
+          <h2 style="padding: 1% 10%;">Works with Koelnmesse Template-Based Event Websites</h2>
+          
+          <p style="padding: 0% 10%; padding-top: 1%;">Koelnmesse uses different website structures. This actor supports the specific template used in many major events such as:</p>
+          
+          <ul style="padding-left: 16%; padding-bottom: 3%;">
+            <li style="list-style: disc;"><a href="https://www.anuga.com/" target="_blank" style="display: inline; color: antiquewhite; text-decoration: underline;"><strong>Anuga</strong></a></li>
+            <li style="list-style: disc;"><a href="https://www.eisenwarenmesse.com/" target="_blank" style="display: inline; color: antiquewhite; text-decoration: underline;"><strong>Eisenwarenmesse</strong></a></li>
+            <li style="list-style: disc;"><a href="https://www.kindundjugend.com/" target="_blank" style="display: inline; color: antiquewhite; text-decoration: underline;"><strong>Kindundjugend</strong></a></li>
+          </ul>
+          
+          <p style="padding: 0% 10%; padding-top: 1%;">If you're unsure whether your event is supported, you can test the URL using:</p>
+          <p style="padding: 0% 10%; padding-bottom: 1%;"><a href="https://apify.com/skython/exhibitor-list-scrapers-router" target="_blank" style="color: antiquewhite; display: inline; text-decoration: underline;"><strong>Exhibitor List Scrapers URL Tester Actor</strong></a></p>
+
+          <br>
+
+          <p style="padding: 1% 10%; text-align: center;"><strong>Example images of the supported website type:</strong></p>
+          
           <div class="image-slider">
             <button class="prev">&#10094;</button>
             <div class="slider-container">
-              <img src="assets/images/blog/koelnmesse/anuga-home-page.png" alt="Koelnmesse Anuga Home Page Screenshot" class="slide active">
-              <img src="assets/images/blog/koelnmesse/eisenwarenmesse-home-page.png" alt="Koelnmesse Eisenwarenmesse Home Page Screenshot" class="slide">
-              <img src="assets/images/blog/koelnmesse/kindundjugend-home-page.png" alt="Koelnmesse Kindundjugend Home Page Screenshot" class="slide">
+              <img src="assets/images/blog/koelnmesse/anuga-home-page.png" alt="Koelnmesse Anuga Trade Fair Website Home Page Image" class="slide active">
+              <img src="assets/images/blog/koelnmesse/anuga-listing-page.png" alt="Koelnmesse Anuga Trade Fair Website Exhibitor Listing Page Image" class="slide">
+              <img src="assets/images/blog/koelnmesse/anuga-detail-page.png" alt="Koelnmesse Anuga Trade Fair Website Exhibitor Detail Page Image" class="slide">
             </div>
             <button class="next">&#10095;</button>
           </div>
-          <br>
-          <p>Example exhibitor listing page images of the supported website type:</strong></p>
-          <div class="image-slider">
-            <button class="prev">&#10094;</button>
-            <div class="slider-container">
-              <img src="assets/images/blog/koelnmesse/anuga-listing-page.png" alt="Koelnmesse Anuga Exhibitor List Page Screenshot" class="slide active">
-              <img src="assets/images/blog/koelnmesse/eisenwarenmesse-listing-page.png" alt="Koelnmesse Eisenwarenmesse Exhibitor List Page Screenshot" class="slide">
-              <img src="assets/images/blog/koelnmesse/kindundjugend-listing-page.png" alt="Koelnmesse Kindundjugend Exhibitor List Page Screenshot" class="slide">
-            </div>
-            <button class="next">&#10095;</button>
-          </div>
-          <br>
-          <p><strong></strong>Example exhibitor detail page images of the supported website type:</strong></p>
-          <div class="image-slider">
-            <button class="prev">&#10094;</button>
-            <div class="slider-container">
-              <img src="assets/images/blog/koelnmesse/anuga-detail-page.png" alt="Koelnmesse Anuga Exhibitor Detail Page Screenshot" class="slide active">
-              <img src="assets/images/blog/koelnmesse/eisenwarenmesse-detail-page.png" alt="Koelnmesse Eisenwarenmesse Exhibitor Detail Page Screenshot" class="slide">
-              <img src="assets/images/blog/koelnmesse/kindundjugend-detail-page.png" alt="Koelnmesse Kindundjugend Exhibitor Detail Page Screenshot" class="slide">
-            </div>
-            <button class="next">&#10095;</button>
-          </div>
+          
+          <!-- Slider'a tıklandığında açılan büyük pencerenin kontrolleri -->
           <div id="lightbox" class="lightbox">
             <span class="close">&times;</span>
             <button class="lightbox-prev">&#10094;</button>
             <img class="lightbox-content" id="lightbox-img">
             <button class="lightbox-next">&#10095;</button>
           </div>
+          
           <br>
-          <h2>Testing the Exhibitor Listing Page URLs</h2>
-          <p>I also provide an event URL testing actor, <a href="https://apify.com/skython/exhibitor-list-scrapers-router" target="_blank" style="color: antiquewhite; display: inline;"><strong>Exhibitor List Scrapers Router & URL Tester</strong></a>, which checks exhibitor listing page URLs to determine whether the <a href="https://apify.com/skython/koelnmesse-exhibitor-list-scraper" target="_blank" style="color: antiquewhite; display:  inline;"><strong>Koelnmesse Exhibitor List Scraper</strong></a> or one of my other scrapers can extract the data from that URL.</p>
+          <h2 style="padding: 1% 10%;">Try It</h2>
+          
+          <p style="padding: 0% 10%; padding-top: 1%;">You can try the Koelnmesse Exhibitor List Scraper here:</p>
+          
+          <p style="padding: 0% 10%;">
+            <a href="https://apify.com/skython/koelnmesse-exhibitor-list-scraper" target="_blank" style="color: antiquewhite; display: inline;"><strong>https://apify.com/skython/koelnmesse-exhibitor-list-scraper</strong></a>
+          </p>
+          
+          <p style="padding: 1% 10%;">Apify provides $5 free credits for testing.</p>
+          
           <br>
-          <h2>How Does it Work?</h2>
-          <p>If you’d like to try the <a href="https://apify.com/skython/koelnmesse-exhibitor-list-scraper" target="_blank" style="color: antiquewhite; display:  inline;"><strong>Koelnmesse Exhibitor List Scraper</strong></a>, it’s available on the Apify platform. With just an event listing page URL, you can turn exhibitor directories into structured datasets in minutes.</p>
-          <p><a href="https://apify.com/" target="_blank" style="color: antiquewhite; display:  inline;"><strong>Apify</strong></a> provides everyone $5 for testing actors.</p>
-          <p>Try for free here: <a href="https://apify.com/skython/koelnmesse-exhibitor-list-scraper" target="_blank" style="color: antiquewhite; display:  inline;"><strong>Koelnmesse Exhibitor List Scraper</strong></a></p>
-          <p>Full list of Koelnmesse trade fairs that supported by this scraper: <a href="https://github.com/selimgokirmak/Koelnmesse-Supported-Events" target="_blank" style="color: antiquewhite; display:  inline;"><strong>Koelnmesse Supported Events (Github)</strong></a></p>
+          <h2 style="padding: 1% 10%;">Supported Koelnmesse Event Websites</h2>
+          
+          <ul style="padding: 1% 15%;">
+            <li style="list-style: disc; padding-bottom: 1%;"><a href="https://www.eisenwarenmesse.com/eisenwarenmesse-exhibitors/list-of-exhibitors/" target="_blank" style="color: antiquewhite; display: inline;"><strong>Eisenwarenmesse 2026 Exhibitor List – eisenwarenmesse.com</strong></a></li>
+            <li style="list-style: disc; padding-bottom: 1%;"><a href="https://www.didacta-cologne.com/didacta-exhibitors/list-of-exhibitors/" target="_blank" style="color: antiquewhite; display: inline;"><strong>Didacta Cologne 2026 Exhibitor List – didacta-cologne.com</strong></a></li>
+            <li style="list-style: disc; padding-bottom: 1%;"><a href="https://www.hh-cologne.com/hh-cologne-exhibitors/list-of-exhibitors/" target="_blank" style="color: antiquewhite; display: inline;"><strong>h+h Cologne 2026 Exhibitor List – hh-cologne.com</strong></a></li>
+            <li style="list-style: disc; padding-bottom: 1%;"><a href="https://www.prosweets.com/psc-exhibitors/list-of-exhibitors/" target="_blank" style="color: antiquewhite; display: inline;"><strong>ProSweets Cologne 2026 Exhibitor List – prosweets.com</strong></a></li>
+            <li style="list-style: disc; padding-bottom: 1%;"><a href="https://www.spogahorse.com/spoga-horse-exhibitors/list-of-exhibitors/" target="_blank" style="color: antiquewhite; display: inline;"><strong>Spoga Horse 2026 Exhibitor List – spogahorse.com</strong></a></li>
+            <li style="list-style: disc; padding-bottom: 1%;"><a href="https://www.ism-cologne.com/ism-cologne-exhibitors/list-of-exhibitors/" target="_blank" style="color: antiquewhite; display: inline;"><strong>ISM Cologne 2026 Exhibitor List – ism-cologne.com</strong></a></li>
+            <li style="list-style: disc; padding-bottom: 1%;"><a href="https://www.anuga.com/anuga-exhibitors/list-of-exhibitors/" target="_blank" style="color: antiquewhite; display: inline;"><strong>Anuga 2025 Exhibitor List – anuga.com</strong></a></li>
+            <li style="list-style: disc; padding-bottom: 1%;"><a href="https://www.kindundjugend.com/kindundjugend-exhibitors/list-of-exhibitors/" target="_blank" style="color: antiquewhite; display: inline;"><strong>Kind + Jugend 2025 Exhibitor List – kindundjugend.com</strong></a></li>
+            <li style="list-style: disc; padding-bottom: 1%;"><a href="https://www.spogagafa.com/spoga-gafa-exhibitors/list-of-exhibitors/" target="_blank" style="color: antiquewhite; display: inline;"><strong>Spoga+Gafa 2025 Exhibitor List – spogagafa.com</strong></a></li>
+            <li style="list-style: disc; padding-bottom: 1%;"><a href="https://www.aquanale.com/aquanale-exhibitors/list-of-exhibitors/" target="_blank" style="color: antiquewhite; display: inline;"><strong>Aquanale 2025 Exhibitor List – aquanale.com</strong></a></li>
+          </ul>
+          
+          <p style="padding: 0% 10%; padding-top: 3%;">Full list of Koelnmesse trade fairs supported by this scraper:</p>
+          <p style="padding: 0% 10%;"><a href="https://github.com/selimgokirmak/Koelnmesse-Supported-Events" target="_blank" style="color: antiquewhite; display:  inline;"><strong>Koelnmesse Supported Events (Github)</strong></a></p>
+          
         </section>
-
-    </div>
-
+        
+      </div>
+      
   </main>
 
   <!--
