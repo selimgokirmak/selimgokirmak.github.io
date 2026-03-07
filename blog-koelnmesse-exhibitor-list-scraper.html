@@ -1,304 +1,447 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Koelnmesse Exhibitor List Scraper</title>
-  
-  <!--
-    - favicon
-    -->
-    <link rel="shortcut icon" href="./assets/images/icons.png" type="image/x-icon">
+    <title>How to Scrape Koelnmesse Exhibitor Lists (Download Exhibitor Data Automatically)</title>
     
-    <!--
-      - custom css link
-      -->
-      <link rel="stylesheet" href="./assets/css/style.css">
-      
-      <!--
-        - google font link
-        -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-        
-        <meta name="description" content="Extract company details, website URLs and contact information from Koelnmesse exhibitor list pages automatically using this Apify scraper. Export data as CSV, Excel or JSON.">
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Extract company details, website URLs and contact information from Koelnmesse exhibitor list pages automatically using this Apify scraper. Export data as CSV, Excel or JSON. No coding required.">
+    <link rel="shortcut icon" href="favicon.ico"> 
+	<link rel="canonical" href="https://selimgokirmak.github.io/blog-koelnmesse-exhibitor-list-scraper.html">
 
-</head>
+	<meta property="og:title" content="How to Scrape Koelnmesse Exhibitor Lists Automatically">
+	<meta property="og:description" content="Download exhibitor data automatically from Koelnmesse event websites using this Apify scraper.">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="https://selimgokirmak.github.io/blog-koelnmesse-exhibitor-list-scraper.html">
+	<meta property="og:image" content="https://selimgokirmak.github.io/assets/images/actors/koelnmesse-m.png">
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-6.css">
+
+    <!-- FontAwesome JS-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js" integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+</head> 
 
 <body>
-
-  <!--
-    - #MAIN
-  -->
-
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <!-- <img src="./assets/images/my-avatar-2.jpg" alt="Selim Gökırmak" width="80"> -->
-          <img src="./assets/images/Python-logo.jpg" alt="Selim Gökırmak" width="80" style="border-radius: 14px;">
-        </figure>
-
-        <div class="info-content">
-          <a href="index.html">
-            <h2 class="name" title="Selim Gökırmak">Selim Gökırmak</h2>
-          </a>
-
-          <p class="title">Web Scraping Specialist</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <a href="https://www.upwork.com/freelancers/~0190b0f3570c2eacbf" target="_blank">
-              <div class="icon-box">
-                <!-- <ion-icon name="phone-portrait-outline"></ion-icon> -->
-                <img src="/assets/images/upwork-icon-dark.png" style="max-width: 80%; border-radius: 14px;" alt="upwork">
-              </div>
-  
-              <div class="contact-info">
-                <p class="contact-title">UpWork</p>
-  
-                <a href="https://www.upwork.com/freelancers/~0190b0f3570c2eacbf" target="_blank"
-                  class="contact-link">upwork.com/selimgokirmak</a>
-              </div>
-            </a>
-
-          </li>
-
-          <li class="contact-item">
-
-            <a href="https://apify.com/skython" target="_blank">
-              <div class="icon-box">
-                <!-- <ion-icon name="phone-portrait-outline"></ion-icon> -->
-                <img src="/assets/images/apify_logo.jpg" style="max-width: 80%; border-radius: 14px;" alt="apify">
-              </div>
-  
-              <div class="contact-info">
-                <p class="contact-title">Apify</p>
-  
-                <a href="https://apify.com/skython" target="_blank" class="contact-link">apify.com/skython</a>
-              </div>
-            </a>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/selimgokirmak/" target="_blank" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="https://github.com/selimgokirmak" target="_blank" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-        <!-- <div class="separator"></div>
-
-        <div class="related-scrapers">
-          <h3 class="related-title" style="color: whitesmoke;">Other Exhibitor Scrapers</h3>
-
-          <ul class="related-list">
-            <li>
-              <a href="messe-frankfurt-exhibitor-list-scraper.html">
-                Messe Frankfurt Exhibitor Scraper
-              </a>
-            </li>
-
-          </ul>
-        </div> -->
-
-      </div>
-
-    </aside>
-
     
-    <div class="main-content">
-      
-      <nav class="navbar">
-        <ul class="navbar-list">
-          <li class="navbar-item">
-            <a href="index.html" class="navbar-link">Home</a>
-          </li>
-        </ul>
-      </nav>
-      
-      <article class="about active" data-page="about">
+    <header class="header text-center">	    
+	    <h1 class="blog-name pt-lg-4 mb-0"><a class="no-text-decoration" href="index.html">Selim Gökırmak</a></h1>
         
-        <header>
-          <h1 class="h2 article-title">Koelnmesse Exhibitor List Scraper</h1>
-        </header>
-        
-        <section class="about-text">
-          
-          <br>
-          
-          <div class="image-single">
-            <div class="single-image-container">
-              <img src="assets/images/actors/koelnmesse-m.png" alt="Koelnmesse Exhibitor List Scraper Image" class="img-single">
-            </div>
-          </div>
-          
-          <br>
-          
-          <p style="padding: 1% 10%;">
-            <a href="https://apify.com/skython/koelnmesse-exhibitor-list-scraper" target="_blank" style="color: antiquewhite; display: inline; text-decoration: underline;"><strong>Koelnmesse Exhibitor List Scraper</strong></a> is a powerful web scraping tool that runs on the <a href="https://apify.com/" target="_blank" style="color: antiquewhite; display:  inline; text-decoration: underline;"><strong>Apify platform*</strong></a> - a solution designed to automatically collect lists of companies participating in trade fairs. It is very easy to use even for non-technical users. (*Apify is a cloud platform and marketplace for web scraping and automation tools.)
-          </p>
-          
-          <p style="padding: 1% 10%;">Koelnmesse is one of the biggest trade fair organizers. It hosts many international fairs such as <a href="https://www.anuga.com/" target="_blank" style="display: inline; color: antiquewhite; text-decoration: underline;"><strong>Anuga</strong></a>, <a href="https://www.eisenwarenmesse.com/" target="_blank" style="display: inline; color: antiquewhite; text-decoration: underline;"><strong>Eisenwarenmesse</strong></a>, <a href="https://www.kindundjugend.com/" target="_blank" style="display: inline; color: antiquewhite; text-decoration: underline;"><strong>Kindundjugend</strong></a>. The exhibitor lists at these fairs are worth gold for business development, sales, networking and competitor analysis.</p>
-          
-          <p style="padding: 1% 10%;">In this article, I will explain what this actor does, how it works, and when it can be useful.</p>
-          
-          <br>
-          <h2 style="padding: 1% 10%;">Company Details Extraction from Koelnmesse Exhibitor Pages</h2>
-          
-          <p style="padding: 1% 10%;">Koelnmesse event websites contain detailed exhibitor profile pages for every participating company.</p>
-          
-          <p style="padding: 0% 10%;">The actor automatically:</p>
-          
-          <ul style="padding-left: 13%; padding-right: 10%; padding-top: 0%; padding-bottom: 1%;">
-            <li>1. Crawls the exhibitor listing pages and detects all exhibitor profile links</li>
-            <li>2. Visits each exhibitor profile</li>
-            <li>3. Extracts company details</li>
-            <li>4. Returns a structured dataset ready to download</li>
-          </ul>
-          
-          <p style="padding-left: 10%; padding-right: 10%; padding-top: 2%; padding-bottom: 0%;">Depending on the event template, the dataset may include:</p>
-          
-          <ul style="padding-left: 16%; padding-bottom: 3%;">
-            <li style="list-style: disc;">Company Details</li>
-            <li style="list-style: disc;">Company Name</li>
-            <li style="list-style: disc;">Hall / Stands</li>
-            <li style="list-style: disc;">Full Address</li>
-            <li style="list-style: disc;">Website URL</li>
-            <li style="list-style: disc;">Phone Number</li>
-            <li style="list-style: disc;">Company Email</li>
-            <li style="list-style: disc;">Social Media Links (LinkedIn, Facebook, Instagram, Twitter, YouTube)</li>
-            <li style="list-style: disc;">Product Categories</li>
-            <li style="list-style: disc;">Brands</li>
-          </ul>
-          
-          <p style="padding: 1% 10%;"><a href="https://apify.com/skython/koelnmesse-exhibitor-list-scraper" target="_blank" style="color: antiquewhite; display: inline; text-decoration: underline;"><strong>Koelnmesse Exhibitor List Scraper</strong></a> automates this entire process. Instead of collecting company details one by one, you can extract the full exhibitor dataset from a listing page in minutes.</p>
-          
-          <p style="padding: 1% 10%;">Whether the event has 200 exhibitors or 2,000, the extraction process works the same way - automatically and at scale.</p>
-          
-          <p style="padding: 1% 10%;">All data can be exported as Excel, CSV or JSON.</p>
-          
-          <br>
-          <h2 style="padding: 1% 10%;">Works with Koelnmesse Template-Based Event Websites</h2>
-          
-          <p style="padding: 0% 10%; padding-top: 1%;">Koelnmesse uses different website structures. This actor supports the specific template used in many major events such as:</p>
-          
-          <ul style="padding-left: 16%; padding-bottom: 3%;">
-            <li style="list-style: disc;"><a href="https://www.anuga.com/" target="_blank" style="display: inline; color: antiquewhite; text-decoration: underline;"><strong>Anuga</strong></a></li>
-            <li style="list-style: disc;"><a href="https://www.eisenwarenmesse.com/" target="_blank" style="display: inline; color: antiquewhite; text-decoration: underline;"><strong>Eisenwarenmesse</strong></a></li>
-            <li style="list-style: disc;"><a href="https://www.kindundjugend.com/" target="_blank" style="display: inline; color: antiquewhite; text-decoration: underline;"><strong>Kindundjugend</strong></a></li>
-          </ul>
-          
-          <p style="padding: 0% 10%; padding-top: 1%;">If you're unsure whether your event is supported, you can test the URL using:</p>
-          <p style="padding: 0% 10%; padding-bottom: 1%;"><a href="https://apify.com/skython/exhibitor-list-scrapers-router" target="_blank" style="color: antiquewhite; display: inline; text-decoration: underline;"><strong>Exhibitor List Scrapers URL Tester Actor</strong></a></p>
+	    <nav class="navbar navbar-expand-lg navbar-dark" >
+           
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-          <br>
+			<div id="navigation" class="collapse navbar-collapse flex-column" >
+				<div class="profile-section pt-3 pt-lg-0">
+				    <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/Python-logo.jpg" alt="image" >			
+					
+					<div class="bio mb-3">Web Scraping Specialist</div><!--//bio-->
+					<ul class="social-list list-inline py-3 mx-auto">
+			            <li class="list-inline-item"><a href="https://www.linkedin.com/in/selimgokirmak/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://github.com/selimgokirmak"><i class="fab fa-github-alt fa-fw"></i></a></li>
+			        </ul><!--//social-list-->
+			        <hr> 
+				</div><!--//profile-section-->
+				
+				<ul class="navbar-nav flex-column text-start">
+					<li class="nav-item">
+					    <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw me-2"></i>Trade Fair Scrapers</a>
+					</li>
+					<!-- <li class="nav-item">
+					    <a class="nav-link" href="/"><i class="fas fa-bookmark fa-fw me-2"></i>Exhibitor List Scrapers</a>
+					</li> -->
+					<li class="nav-item">
+					    <a class="nav-link" href="about.html"><i class="fas fa-user fa-fw me-2"></i>About Me</a>
+					</li>
+				</ul>
 
-          <p style="padding: 1% 10%; text-align: center;"><strong>Example images of the supported website type:</strong></p>
-          
-          <div class="image-slider">
-            <button class="prev">&#10094;</button>
-            <div class="slider-container">
-              <img src="assets/images/blog/koelnmesse/anuga-home-page.png" alt="Koelnmesse Anuga Trade Fair Website Home Page Image" class="slide active">
-              <img src="assets/images/blog/koelnmesse/anuga-listing-page.png" alt="Koelnmesse Anuga Trade Fair Website Exhibitor Listing Page Image" class="slide">
-              <img src="assets/images/blog/koelnmesse/anuga-detail-page.png" alt="Koelnmesse Anuga Trade Fair Website Exhibitor Detail Page Image" class="slide">
-            </div>
-            <button class="next">&#10095;</button>
-          </div>
-          
-          <!-- Slider'a tıklandığında açılan büyük pencerenin kontrolleri -->
-          <div id="lightbox" class="lightbox">
-            <span class="close">&times;</span>
-            <button class="lightbox-prev">&#10094;</button>
-            <img class="lightbox-content" id="lightbox-img">
-            <button class="lightbox-next">&#10095;</button>
-          </div>
-          
-          <br>
-          <h2 style="padding: 1% 10%;">Try It</h2>
-          
-          <p style="padding: 0% 10%; padding-top: 1%;">You can try the Koelnmesse Exhibitor List Scraper here:</p>
-          
-          <p style="padding: 0% 10%;">
-            <a href="https://apify.com/skython/koelnmesse-exhibitor-list-scraper" target="_blank" style="color: antiquewhite; display: inline;"><strong>https://apify.com/skython/koelnmesse-exhibitor-list-scraper</strong></a>
-          </p>
-          
-          <p style="padding: 1% 10%;">Apify provides $5 free credits for testing.</p>
-          
-          <br>
-          <h2 style="padding: 1% 10%;">Supported Koelnmesse Event Websites</h2>
-          
-          <ul style="padding: 1% 15%;">
-            <li style="list-style: disc; padding-bottom: 1%;"><a href="https://www.eisenwarenmesse.com/eisenwarenmesse-exhibitors/list-of-exhibitors/" target="_blank" style="color: antiquewhite; display: inline;"><strong>Eisenwarenmesse 2026 Exhibitor List – eisenwarenmesse.com</strong></a></li>
-            <li style="list-style: disc; padding-bottom: 1%;"><a href="https://www.didacta-cologne.com/didacta-exhibitors/list-of-exhibitors/" target="_blank" style="color: antiquewhite; display: inline;"><strong>Didacta Cologne 2026 Exhibitor List – didacta-cologne.com</strong></a></li>
-            <li style="list-style: disc; padding-bottom: 1%;"><a href="https://www.hh-cologne.com/hh-cologne-exhibitors/list-of-exhibitors/" target="_blank" style="color: antiquewhite; display: inline;"><strong>h+h Cologne 2026 Exhibitor List – hh-cologne.com</strong></a></li>
-            <li style="list-style: disc; padding-bottom: 1%;"><a href="https://www.prosweets.com/psc-exhibitors/list-of-exhibitors/" target="_blank" style="color: antiquewhite; display: inline;"><strong>ProSweets Cologne 2026 Exhibitor List – prosweets.com</strong></a></li>
-            <li style="list-style: disc; padding-bottom: 1%;"><a href="https://www.spogahorse.com/spoga-horse-exhibitors/list-of-exhibitors/" target="_blank" style="color: antiquewhite; display: inline;"><strong>Spoga Horse 2026 Exhibitor List – spogahorse.com</strong></a></li>
-            <li style="list-style: disc; padding-bottom: 1%;"><a href="https://www.ism-cologne.com/ism-cologne-exhibitors/list-of-exhibitors/" target="_blank" style="color: antiquewhite; display: inline;"><strong>ISM Cologne 2026 Exhibitor List – ism-cologne.com</strong></a></li>
-            <li style="list-style: disc; padding-bottom: 1%;"><a href="https://www.anuga.com/anuga-exhibitors/list-of-exhibitors/" target="_blank" style="color: antiquewhite; display: inline;"><strong>Anuga 2025 Exhibitor List – anuga.com</strong></a></li>
-            <li style="list-style: disc; padding-bottom: 1%;"><a href="https://www.kindundjugend.com/kindundjugend-exhibitors/list-of-exhibitors/" target="_blank" style="color: antiquewhite; display: inline;"><strong>Kind + Jugend 2025 Exhibitor List – kindundjugend.com</strong></a></li>
-            <li style="list-style: disc; padding-bottom: 1%;"><a href="https://www.spogagafa.com/spoga-gafa-exhibitors/list-of-exhibitors/" target="_blank" style="color: antiquewhite; display: inline;"><strong>Spoga+Gafa 2025 Exhibitor List – spogagafa.com</strong></a></li>
-            <li style="list-style: disc; padding-bottom: 1%;"><a href="https://www.aquanale.com/aquanale-exhibitors/list-of-exhibitors/" target="_blank" style="color: antiquewhite; display: inline;"><strong>Aquanale 2025 Exhibitor List – aquanale.com</strong></a></li>
-          </ul>
-          
-          <p style="padding: 0% 10%; padding-top: 3%;">Full list of Koelnmesse trade fairs supported by this scraper:</p>
-          <p style="padding: 0% 10%;"><a href="https://github.com/selimgokirmak/Koelnmesse-Supported-Events" target="_blank" style="color: antiquewhite; display:  inline;"><strong>Koelnmesse Supported Events (Github)</strong></a></p>
-          
-        </section>
-        
-      </div>
-      
-  </main>
+			</div>
+		</nav>
+    </header>
+    
+    <div class="main-wrapper">
 
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
+		<section class="cta-section theme-bg-light py-5">
+			<div class="container text-center single-col-max-width">
+				<header class="blog-post-header">
+					<h1 class="heading">How to Scrape Koelnmesse Exhibitor Lists?</h1>
+				</header>
+			</div>
+		</section>
+	    
+	    <article class="blog-post px-3 py-5 p-md-5">
+		    <div class="container single-col-max-width">
+			    
+			    <div class="blog-post-body">
+				    <figure class="blog-banner">
+				        <a href="https://apify.com/skython/koelnmesse-exhibitor-list-scraper" target="_blank"><img class="img-fluid" style="border: 5px solid; border-radius: 20px;" src="assets/images/actors/koelnmesse.png" alt="image"></a>
+				        <figcaption class="mt-2 text-center image-caption"><a class="theme-link" href="https://apify.com/skython/koelnmesse-exhibitor-list-scraper" target="_blank">Run Koelnmesse Exhibitor List Scraper on Apify</a></figcaption>
+				    </figure>
+				    <p><a class="text-link" href="https://apify.com/skython/koelnmesse-exhibitor-list-scraper" target="_blank"><strong>Koelnmesse Exhibitor List Scraper</strong></a> is a powerful web scraping tool that runs on the <a class="text-link" href="https://apify.com/" target="_blank"><strong>Apify platform</strong></a>* - a solution designed to automatically collect lists of companies participating in trade fairs. It is very easy to use even for non-technical users.</p> 
 
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+					<blockquote class="blockquote m-lg-5 py-3   ps-4 px-lg-5">
+						<p>*<a class="text-link" href="https://apify.com/" target="_blank"><strong>Apify</strong></a> is a cloud platform and marketplace for web scraping and automation tools.</p>
+					</blockquote>
+
+					<p>In this blog post, I will explain what this scraping tool does, how it works, which data fields it extracts, and which events are supported.</p>
+					
+					<h2 class="mt-5 mb-3">What Does Koelnmesse Exhibitor Scraper Do?</h2>
+					<p><a class="text-link" href="https://apify.com/skython/koelnmesse-exhibitor-list-scraper" target="_blank"><strong>Koelnmesse Exhibitor List Scraper</strong></a> automatically crawls the listing and detail pages on the trade show website to generate structured data. It eliminates the need for manual data collection and provides a repeatable, scalable scraping process. </p>
+
+					<p>It typically automates the following steps:</p>
+					<ol class="mb-4">
+						<li class="mb-2">Crawls the exhibitor listing pages and detects all exhibitor profile links.</li>
+						<li class="mb-2">Visits each exhibitor profile and extracts company details.</li>
+						<li class="mb-2">Scrapes data fields such as company name, contact information, website, product categories, and social media links.</li>
+						<li class="mb-2">Returns a structured dataset ready to download in multiple formats.</li>
+					</ol>
+
+					<p>Depending on the event website, the dataset may include:</p>
+					<ul class="mb-4">
+						<li class="mb-2">Exhibitor Profile URL</li>
+						<li class="mb-2">Company Name</li>
+						<li class="mb-2">Full Address</li>
+						<li class="mb-2">Phone Number</li>
+						<li class="mb-2">Email</li>
+						<li class="mb-2">Website URL</li>
+						<li class="mb-2">Hall / Stands</li>
+						<li class="mb-2">Social Media Links (LinkedIn, Facebook, Instagram, Twitter, YouTube)</li>
+						<li class="mb-2">Brands</li>
+						<li class="mb-2">Product Sectors</li>
+						<li class="mb-2">Product Emphasis</li>
+						<li class="mb-2">Target and Outlet Markets</li>
+						<li class="mb-2">Product Categories</li>
+					</ul>
+
+					<p>Whether the event has 500 exhibitors or 5,000, the extraction process works the same way - automatically and at scale.</p>
+					<p>All data can be exported as Excel, CSV or JSON.</p>
+
+					<h2 class="mt-5 mb-3">Supports Koelnmesse Template-Based Event Websites</h2>
+					<p>Some of the Koelnmesse events use the same website template and URL structure. <a class="text-link" href="https://apify.com/skython/koelnmesse-exhibitor-list-scraper" target="_blank"><strong>Koelnmesse Exhibitor List Scraper</strong></a> works for all event websites that use a specific template such as:</p>
+					<ul class="mb-4">
+						<li class="mb-2">Eisenwarenmesse – <a class="text-link" href="https://www.eisenwarenmesse.com/eisenwarenmesse-exhibitors/list-of-exhibitors/" target="_blank"><strong>eisenwarenmesse.com</strong></a></li>
+
+						<li class="mb-2">Anuga – <a class="text-link" href="https://www.anuga.com/anuga-exhibitors/list-of-exhibitors/" target="_blank"><strong>anuga.com</strong></a></li>
+						
+						<li class="mb-2">h+h Cologne – <a class="text-link" href="https://www.hh-cologne.com/hh-cologne-exhibitors/list-of-exhibitors/" target="_blank"><strong>hh-cologne.com</strong></a></li>
+					</ul>
+					
+					<h2 class="mt-5 mb-3">Sample Output Data</h2>
+					<p>Output data can be exported in Excel, CSV or JSON format.</p>
+
+					<h5 class="my-4">JSON Format:</h5>
+					<div class="code-block mb-5">
+						<div class="code-header">
+							<span>JSON</span>
+						</div>
+						<pre><code>
+{
+  "___exhibitor_profile_url": "https://www.eisenwarenmesse.com/exhibitor/_riteintherain/",
+  "__company_name": "Rite in the Rain",
+  "_company_country": "United States of America",
+  "_hall_stands": "Hall 11.1 | F021",
+  "_company_email": "jld_salessupport@riteintherain.com",
+  "_company_phone": "+1 922 500 0",
+  "_company_website": "http://www.riteintherain.com",
+  "_company_address": "2614 Pacific Hwy E, 98424-1001, Tacoma ,WA, United States of America",
+  "_social_url_linkedin": "https://www.linkedin.com/company/riteintherain",
+  "_social_url_facebook": "https://www.facebook.com/riteintherain/",
+  "_social_url_instagram": "https://www.instagram.com/riteintherain/",
+  "_social_url_twitter": "https://x.com/RiteintheRain",
+  "_social_url_youtube": "https://www.youtube.com/user/RiteintheRainVideo",
+  "brands": "Rite in the Rain",
+  "product_emphasis": "Hand Tools | workshop and factory equipment, industrial supplies, protective equipment",
+  "product_sector": "Tools",
+  "product_groups": [
+    {
+      "title": "Hand Tools",
+      "subgroups": [
+        {
+          "title": "Marking tools",
+          "subgroups": null
+        },
+        {
+          "title": "Gardening, agricultural and forestry tools",
+          "subgroups": null
+        }
+      ]
+    },
+    {
+      "title": "workshop and factory equipment, industrial supplies, protective equipment",
+      "subgroups": [
+        {
+          "title": "Marking and identification systems",
+          "subgroups": null
+        }
+      ]
+    }
+  ]
+}
+						</code></pre>
+					</div>
+
+					<h5 class="my-4">Table Format:</h5>
+					<div class="table-responsive" style="border: 1px solid black; border-radius: 10px;">
+						<table class="table table-striped my-3">
+							<thead>
+								<tr>
+									<th scope="col" style="min-width: 120px;">Exhibitor Profile URL</th>
+									<th scope="col" style="min-width: 120px;">Company Name</th>
+									<th scope="col" style="min-width: 300px;">Company Address</th>
+									<th scope="col">Country</th>
+									<th scope="col">Phone Number</th>
+									<th scope="col">Email</th>
+									<th scope="col">Website</th>
+									<th scope="col" style="min-width: 150px;">Hall Stands</th>
+									<th scope="col">LinkedIn</th>
+									<th scope="col">Facebook</th>
+									<th scope="col">Instagram</th>
+									<th scope="col">Twitter</th>
+									<th scope="col">YouTube</th>
+									<th scope="col">Brands</th>
+									<th scope="col">Product Sectors</th>
+									<th scope="col" style="min-width: 300px;">Product Emphasis</th>
+									<th scope="col" style="min-width: 300px;">Product Category Level 1</th>
+									<th scope="col" style="min-width: 300px;">Product Category Level 2</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>https://www.eisenwarenmesse.com/exhibitor/_riteintherain/</td>
+									<td>Rite in the Rain</td>
+									<td>2614 Pacific Hwy E, 98424-1001, Tacoma ,WA, United States of America</td>
+									<td>United States of America</td>
+									<td>+1 922 500 0</td>
+									<td>jld_salessupport@riteintherain.com</td>
+									<td>http://www.riteintherain.com</td>
+									<td>Hall 11.1 | F021</td>
+									<td>https://www.linkedin.com/company/riteintherain</td>
+									<td>https://www.facebook.com/riteintherain/</td>
+									<td>https://www.instagram.com/riteintherain/</td>
+									<td>https://x.com/RiteintheRain</td>
+									<td>https://www.youtube.com/user/RiteintheRainVideo</td>
+									<td>Rite in the Rain</td>
+									<td>Tools</td>
+									<td>Hand Tools | workshop and factory equipment, industrial supplies, protective equipment</td>
+									<td>Hand Tools</td>
+									<td>Marking tools</td>
+								</tr>
+								<tr>
+									<td>https://www.eisenwarenmesse.com/exhibitor/_riteintherain/</td>
+									<td>Rite in the Rain</td>
+									<td>2614 Pacific Hwy E, 98424-1001, Tacoma ,WA, United States of America</td>
+									<td>United States of America</td>
+									<td>+1 922 500 0</td>
+									<td>jld_salessupport@riteintherain.com</td>
+									<td>http://www.riteintherain.com</td>
+									<td>Hall 11.1 | F021</td>
+									<td>https://www.linkedin.com/company/riteintherain</td>
+									<td>https://www.facebook.com/riteintherain/</td>
+									<td>https://www.instagram.com/riteintherain/</td>
+									<td>https://x.com/RiteintheRain</td>
+									<td>https://www.youtube.com/user/RiteintheRainVideo</td>
+									<td>Rite in the Rain</td>
+									<td>Tools</td>
+									<td>Hand Tools | workshop and factory equipment, industrial supplies, protective equipment</td>
+									<td>Hand Tools</td>
+									<td>Gardening, agricultural and forestry tools</td>
+								</tr>
+								<tr>
+									<td>https://www.eisenwarenmesse.com/exhibitor/_riteintherain/</td>
+									<td>Rite in the Rain</td>
+									<td>2614 Pacific Hwy E, 98424-1001, Tacoma ,WA, United States of America</td>
+									<td>United States of America</td>
+									<td>+1 922 500 0</td>
+									<td>jld_salessupport@riteintherain.com</td>
+									<td>http://www.riteintherain.com</td>
+									<td>Hall 11.1 | F021</td>
+									<td>https://www.linkedin.com/company/riteintherain</td>
+									<td>https://www.facebook.com/riteintherain/</td>
+									<td>https://www.instagram.com/riteintherain/</td>
+									<td>https://x.com/RiteintheRain</td>
+									<td>https://www.youtube.com/user/RiteintheRainVideo</td>
+									<td>Rite in the Rain</td>
+									<td>Tools</td>
+									<td>Hand Tools | workshop and factory equipment, industrial supplies, protective equipment</td>
+									<td>workshop and factory equipment, industrial supplies, protective equipment</td>
+									<td>Marking and identification systems</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<blockquote class="blockquote m-lg-5 py-3   ps-4 px-lg-5">
+						<p class="mb-2">The example data in this table is expanded by product categories. Expanded means a new row has been added for each product category.</p>
+					</blockquote>
+						
+					<h2 class="mt-5 mb-3">Why Use Koelnmesse Exhibitor Scraper?</h2>
+					<ul class="mb-4">
+						<li class="mb-2">No setup required – run directly on Apify</li>
+						<li class="mb-2">No coding required – ready to use</li>
+						<li class="mb-2">Robust and Scalable for large events</li>
+						<li class="mb-2">Works for all event websites that use specific template</li>
+						<li class="mb-2">Export to Excel, CSV, or JSON</li>
+					</ul>
+
+					<h2 class="mt-5 mb-3">How to Scrape Koelnmesse Exhibitor List?</h2>
+					<ol class="mb-4">
+						<li class="mb-2">Copy the exhibitor directory URL</li>
+						<li class="mb-2">Open the Apify actor</li>
+						<li class="mb-2">Paste the URL in the Actor input</li>
+						<li class="mb-2">Click Run and wait for the scraping process</li>
+						<li class="mb-2">Review and Download the dataset</li>
+					</ol>
+
+					<h2 class="mt-5 mb-3">Try It</h2>
+					<p>You can run the Koelnmesse Exhibitor Scraper instantly on Apify. Easily test it with an Apify free account. Apify provides $5 free credits for testing actors.</p>
+					<p><a class="btn btn-primary" href="https://apify.com/skython/koelnmesse-exhibitor-list-scraper" target="_blank"><strong>Run on Apify</strong></a></p>
+					
+					<h2 class="mt-5 mb-3">Supported Koelnmesse Events</h2>
+					<p>Full list of Koelnmesse supported trade fairs (View on Github): <a class="text-link" href="https://github.com/selimgokirmak/Koelnmesse-Supported-Events" target="_blank"><strong>Koelnmesse Supported Events</strong></a></p>
+					<ul class="mb-1">
+						<li class="mb-2">Didacta Cologne 2026 Exhibitor List – <a class="text-link" href="https://www.didacta-cologne.com/didacta-exhibitors/list-of-exhibitors/" target="_blank"><strong>didacta-cologne.com</strong></a></li>
+
+						<li class="mb-2">ProSweets Cologne 2026 Exhibitor List – <a class="text-link" href="https://www.prosweets.com/psc-exhibitors/list-of-exhibitors/" target="_blank"><strong>prosweets.com</strong></a></li>
+
+						<li class="mb-2">Spoga Horse 2026 Exhibitor List – <a class="text-link" href="https://www.spogahorse.com/spoga-horse-exhibitors/list-of-exhibitors/" target="_blank"><strong>spogahorse.com</strong></a></li>
+
+						<li class="mb-2">ISM Cologne 2026 Exhibitor List – <a class="text-link" href="https://www.ism-cologne.com/ism-cologne-exhibitors/list-of-exhibitors/" target="_blank"><strong>ism-cologne.com</strong></a></li>
+
+						<li class="mb-2">Aquanale 2025 Exhibitor List – <a class="text-link" href="https://www.aquanale.com/aquanale-exhibitors/list-of-exhibitors/" target="_blank"><strong>aquanale.com</strong></a></li>
+
+						<li class="mb-2">Asia-Pacific Sourcing 2025 Exhibitor List – <a class="text-link" href="https://www.asia-pacificsourcing.com/aps-exhibitors/list-of-exhibitors/" target="_blank"><strong>asia-pacificsourcing.com</strong></a></li>
+
+						<li class="mb-2">FSB Cologne 2025 Exhibitor List – <a class="text-link" href="https://www.fsb-cologne.com/fsb-exhibitors/list-of-exhibitors/" target="_blank"><strong>fsb-cologne.com</strong></a></li>
+
+						<li class="mb-2">Intermot Cologne 2025 Exhibitor List – <a class="text-link" href="https://www.intermot-cologne.com/intermot-exhibitors/list-of-exhibitors/" target="_blank"><strong>intermot-cologne.com</strong></a></li>
+
+						<li class="mb-2">Interzum 2025 Exhibitor List – <a class="text-link" href="https://www.interzum.com/en/interzum-exhibitors/list-of-exhibitors/" target="_blank"><strong>interzum.com</strong></a></li>
+
+						<li class="mb-2">Kind + Jugend 2025 Exhibitor List – <a class="text-link" href="https://www.kindundjugend.com/kindundjugend-exhibitors/list-of-exhibitors/" target="_blank"><strong>kindundjugend.com</strong></a></li>
+					</ul>
+
+				</div>
+
+			</div><!--//container-->
+		</article>
+
+		<section class="promo-section theme-bg-light py-5 text-center">
+			<div class="container-fluid px-5">
+				<h2 class="title mb-5">Explore My Other Exhibitor List Scrapers</h2>
+
+				<div class="scraper-scroll d-flex overflow-auto pb-3">
+
+					<div class="scraper-card card me-3" style="border-radius: 20px;">
+						<a href="/blog-map-your-show-exhibitor-list-scraper.html">
+						<img src="assets/images/actors/map-your-show-m.png" class="card-img-top"
+							alt="Map Your Show Exhibitor List Scraper" style="border-radius: 20px;">
+						<div class="card-body">
+							<h6 class="card-title">Map Your Show Exhibitor List Scraper</h6>
+						</div>
+						</a>
+					</div>
+
+					<div class="scraper-card card me-3" style="border-radius: 20px;">
+						<a href="/blog-messe-duesseldorf-exhibitor-list-scraper.html">
+						<img src="assets/images/actors/messe-duesseldorf-m.png" class="card-img-top"
+							alt="Messe Duesseldorf Exhibitor List Scraper"  style="border-radius: 20px;">
+						<div class="card-body">
+							<h6 class="card-title">Messe Duesseldorf Exhibitor List Scraper</h6>
+						</div>
+						</a>
+					</div>
+
+					<div class="scraper-card card me-3" style="border-radius: 20px;">
+						<a href="/blog-messe-frankfurt-exhibitor-list-scraper.html">
+						<img src="assets/images/actors/messe-frankfurt-m.png" class="card-img-top"
+							alt="Messe Frankfurt Exhibitor List Scraper" style="border-radius: 20px;">
+						<div class="card-body">
+							<h6 class="card-title">Messe Frankfurt Exhibitor List Scraper</h6>
+						</div>
+						</a>
+					</div>
+
+					<div class="scraper-card card me-3" style="border-radius: 20px;">
+						<a href="/blog-xporience-exhibitor-list-scraper.html">
+						<img src="assets/images/actors/xporience-m.png" class="card-img-top"
+							alt="Xporience Exhibitor List Scraper" style="border-radius: 20px;">
+						<div class="card-body">
+							<h6 class="card-title">Xporience Exhibitor List Scraper</h6>
+						</div>
+						</a>
+					</div>
+
+					<div class="scraper-card card me-3" style="border-radius: 20px;">
+						<a href="/blog-messe-muenchen-exhibitor-list-scraper.html">
+						<img src="assets/images/actors/messe-muenchen-m.png" class="card-img-top"
+							alt="Messe Muenchen Exhibitor List Scraper" style="border-radius: 20px;">
+						<div class="card-body">
+							<h6 class="card-title">Messe Muenchen Exhibitor List Scraper</h6>
+						</div>
+						</a>
+					</div>
+
+					<div class="scraper-card card me-3" style="border-radius: 20px;">
+						<a href="/blog-reed-expo-exhibitor-list-scraper.html">
+						<img src="assets/images/actors/reed-expo-m.png" class="card-img-top"
+							alt="Reed Expo Exhibitor List Scraper" style="border-radius: 20px;">
+						<div class="card-body">
+							<h6 class="card-title">Reed Expo Exhibitor List Scraper</h6>
+						</div>
+						</a>
+					</div>
+
+					<div class="scraper-card card me-3" style="border-radius: 20px;">
+						<a href="/blog-nuernberg-messe-exhibitor-list-scraper.html">
+						<img src="assets/images/actors/nuernberg-messe-m.png" class="card-img-top"
+							alt="Nuernberg Messe Exhibitor List Scraper" style="border-radius: 20px;">
+						<div class="card-body">
+							<h6 class="card-title">Nuernberg Messe Exhibitor List Scraper</h6>
+						</div>
+						</a>
+					</div>
+
+					<div class="scraper-card card me-3" style="border-radius: 20px;">
+						<a href="/blog-gsma-mwc-exhibitor-list-scraper.html">
+						<img src="assets/images/actors/gsma-mwc-m.png" class="card-img-top"
+							alt="GSMA MWC Exhibitor List Scraper" style="border-radius: 20px;">
+						<div class="card-body">
+							<h6 class="card-title">GSMA MWC Exhibitor List Scraper</h6>
+						</div>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+		<footer class="footer text-center py-2 theme-bg-dark">
+
+            <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="https://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+
+		</footer>
+    
+    </div><!--//main-wrapper-->
+    
+
+    <!-- Javascript -->          
+    <script src="assets/plugins/popper.min.js"></script> 
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+
+    <!-- Page Specific JS -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/blog.js"></script> 
+    
 
 </body>
+</html> 
 
-</html>
