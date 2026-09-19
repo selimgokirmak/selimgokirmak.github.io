@@ -3,19 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>How to Scrape Koelnmesse Exhibitor Lists (Download Exhibitor Data Automatically)</title>
-    <meta name="description" content="Extract structured exhibitor data from Koelnmesse events. Get company details, booth info, product categories and more as clean CSV, Excel or JSON. No coding required." />
-    <link rel="canonical" href="https://selimgokirmak.github.io/blog-koelnmesse-exhibitor-list-scraper.html" />
+    <title>How to Scrape Xporience Exhibitor Lists (Download Exhibitor Data Automatically)</title>
+    <meta name="description" content="Extract structured exhibitor data from Xporience events. Get company details, booth info, product categories and more as clean CSV, Excel or JSON. No coding required." />
+    <link rel="canonical" href="https://selimgokirmak.github.io/blog-xporience-exhibitor-list-scraper-v2.html" />
     <link rel="shortcut icon" href="/images/skython-logo.png">
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Koelnmesse Exhibitor List Scraper — Skython" />
-    <meta property="og:description" content="Extract structured exhibitor data from Koelnmesse events. Get company details, booth info, product categories and more as clean CSV, Excel or JSON. No coding required." />
-    <meta property="og:url" content="https://selimgokirmak.github.io/blog-koelnmesse-exhibitor-list-scraper.html" />
+    <meta property="og:title" content="Xporience Exhibitor List Scraper V2 — Skython" />
+    <meta property="og:description" content="Extract structured exhibitor data from Xporience events. Get company details, booth info, product categories and more as clean CSV, Excel or JSON. No coding required." />
+    <meta property="og:url" content="https://selimgokirmak.github.io/blog-xporience-exhibitor-list-scraper-v2.html" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Koelnmesse Exhibitor List Scraper — Skython" />
-    <meta name="twitter:description" content="Extract structured exhibitor data from Koelnmesse events. Get company details, booth info, product categories and more as clean CSV, Excel or JSON. No coding required." />
+    <meta name="twitter:title" content="Xporience Exhibitor List Scraper V2 — Skython" />
+    <meta name="twitter:description" content="Extract structured exhibitor data from Xporience events. Get company details, booth info, product categories and more as clean CSV, Excel or JSON. No coding required." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,15 +26,15 @@
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      "name": "Koelnmesse Exhibitor List Scraper",
+      "name": "Xporience Exhibitor List Scraper V2",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
-      "description": "Extract structured exhibitor data from Koelnmesse events. Get company details, booth info, product categories and more as clean CSV, Excel or JSON. No coding required.",
-      "url": "https://selimgokirmak.github.io/blog-koelnmesse-exhibitor-list-scraper.html"
+      "description": "Extract structured exhibitor data from Xporience events. Get company details, booth info, product categories and more as clean CSV, Excel or JSON. No coding required.",
+      "url": "https://selimgokirmak.github.io/blog-xporience-exhibitor-list-scraper-v2.html"
     }
     </script>
   </head>
-  <body data-slug="koelnmesse-exhibitor-list-scraper">
+  <body data-slug="xporience-exhibitor-list-scraper-v2">
     <header class="site-header">
       <div class="container">
         <div class="site-header__inner">
@@ -52,13 +52,13 @@
         <nav class="breadcrumb">
           <a href="/">Home</a>
           <span class="breadcrumb__sep">/</span>
-          <span>Koelnmesse Exhibitor List Scraper</span>
+          <span>Xporience Exhibitor List Scraper V2</span>
         </nav>
-        <p class="detail-hero__label">Koelnmesse &middot; Trade Shows</p>
-        <h1 class="detail-hero__title">Koelnmesse Exhibitor List Scraper</h1>
-        <p class="detail-hero__desc">Extract structured exhibitor data from Koelnmesse exhibitions.</p>
+        <p class="detail-hero__label">Xporience &middot; Trade Shows</p>
+        <h1 class="detail-hero__title">Xporience Exhibitor List Scraper V2</h1>
+        <p class="detail-hero__desc">Extract structured exhibitor data from Xporience exhibitions.</p>
         <div class="detail-hero__actions" id="heroActions">
-          <a href="https://apify.com/skython/koelnmesse-exhibitor-list-scraper" target="_blank" rel="noopener" class="btn btn--primary btn--lg">View on Apify <span class="btn__arrow">&rarr;</span></a>
+          <a href="https://apify.com/skython/xporience-exhibitor-list-scraper-2" target="_blank" rel="noopener" class="btn btn--primary btn--lg">View on Apify <span class="btn__arrow">&rarr;</span></a>
         </div>
       </div>
     </section>
@@ -69,13 +69,13 @@
         <main class="detail-content">
           <!-- Overview -->
           <section class="detail-section" id="overview">
-            <h2 class="detail-section__title">How to Scrape Koelnmesse Exhibitor Directories?</h2>
+            <h2 class="detail-section__title">How to Scrape Xporience Exhibitor Directories?</h2>
             <div id="overviewContent">
               <p>
-                Koelnmesse Exhibitor List Scraper connects to public Koelnmesse event pages and extracts the complete exhibitor directory as structured data.
+                Xporience Exhibitor List Scraper connects to public Xporience event pages and extracts the complete exhibitor directory as structured data.
               </p>
               <p>
-                Koelnmesse powers some of the largest trade show digital catalogs including events across manufacturing, healthcare, construction, automotive, technology, energy, food & beverage, packaging, and consumer goods industries.
+                Xporience powers some of the largest trade show digital catalogs including events across manufacturing, healthcare, construction, automotive, technology, energy, food & beverage, packaging, and consumer goods industries.
               </p>
               <p>
                 The scraper handles pagination automatically, resolves exhibitor detail pages, and returns a clean CSV, EXCEL, JSON dataset with company profiles, contact information, booth assignments, product categories, and social media links.
@@ -119,23 +119,16 @@
               <div class="field-card">
                 <div class="field-card__name">
                   <span class="field-card__dot"></span>
-                  Phone
-                </div>
-                <div class="field-card__desc">Exhibitor contact phone number</div>
-              </div>
-              <div class="field-card">
-                <div class="field-card__name">
-                  <span class="field-card__dot"></span>
-                  Email
-                </div>
-                <div class="field-card__desc">Exhibitor contact email</div>
-              </div>
-              <div class="field-card">
-                <div class="field-card__name">
-                  <span class="field-card__dot"></span>
                   Social Media
                 </div>
                 <div class="field-card__desc">LinkedIn, Facebook, Instagram, Twitter, YouTube links</div>
+              </div>
+              <div class="field-card">
+                <div class="field-card__name">
+                  <span class="field-card__dot"></span>
+                  Description
+                </div>
+                <div class="field-card__desc">Company description from exhibitor profile</div>
               </div>
               <div class="field-card">
                 <div class="field-card__name">
@@ -174,7 +167,7 @@
               <div class="step">
                 <div class="step__number">Step 1</div>
                 <h3 class="step__title">Enter the Event URL</h3>
-                <p class="step__desc">Provide the URL of the Koelnmesse event exhibitor listing page.</p>
+                <p class="step__desc">Provide the URL of the Xporience event exhibitor listing page.</p>
               </div>
               <div class="step">
                 <div class="step__number">Step 2</div>
@@ -197,7 +190,7 @@
           <!-- Supported Events -->
           <section class="detail-section" id="supported-events">
             <h2 class="detail-section__title">Supported Events</h2>
-            <p class="detail-section__lead">This scraper works with any public Koelnmesse event. Below is a selection of supported events.</p>
+            <p class="detail-section__lead">This scraper works with any public Xporience event. Below is a selection of supported events.</p>
             <div class="events-search">
               <input type="text" class="search-input" id="eventsSearch" placeholder="Search events by event name or domain..." autocomplete="off" />
             </div>
@@ -211,12 +204,12 @@
           <div class="sidebar-card">
             <div class="sidebar-card__title">Scraper Details</div>
             <dl>
-              <div><dt>Platform</dt><dd>Koelnmesse</dd></div>
+              <div><dt>Platform</dt><dd>Xporience</dd></div>
               <div><dt>Category</dt><dd>Trade Shows</dd></div>
               <div><dt>Data Type</dt><dd>Exhibitor Data</dd></div>
               <div><dt>Output Format</dt><dd>CSV, EXCEL, JSON</dd></div>
             </dl>
-            <a href="https://apify.com/skython/koelnmesse-exhibitor-list-scraper" id="sidebarApifyUrl" target="_blank" rel="noopener" class="btn btn--primary">View on Apify &rarr;</a>
+            <a href="https://apify.com/skython/xporience-exhibitor-list-scraper-2" id="sidebarApifyUrl" target="_blank" rel="noopener" class="btn btn--primary">View on Apify &rarr;</a>
           </div>
         </aside>
       </div>
